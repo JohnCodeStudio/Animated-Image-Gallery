@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Hover Gallery</title>
+</head>
+<style>
+    body {
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+    }
+
+    .container {
+        display: flex;
+        gap: 15px;
+        max-width: 50%;
+        margin: 200px auto;
+    }
+
+    img {
+        display: flex;
+        width: 60px;
+        height: 550px;
+        border-radius: 5px;
+        transition: all .3s ease;
+        cursor: pointer;
+        flex: 1;
+        object-fit: cover;
+        opacity: 1;
+    }
+
+    .container :nth-child(odd) {
+        translate: 0 20px;
+    }
+
+    .container :nth-child(even) {
+        translate: 0 -20px;
+    }
+
+    img:hover {
+        flex: 3;
+    }
+
+    .container:hover img:not(:hover) {
+        opacity: .8;
+        filter: grayscale(100%);
+    }
+    
+</style>
+
+<body>
+    <div class="container">
+        <img src="https://i.pinimg.com/736x/0b/7d/4e/0b7d4e9478689ffdc4073680311376b5.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/cc/2e/b2/cc2eb2e55b9b43dc53cb754ce766384f.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/8e/73/2c/8e732c3b68eec8aec183da518d9fbd6b.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/04/1b/04/041b045fd6042e8d8b5c7b9711adaaa6.jpg" alt="">
+        <img src="https://i.pinimg.com/736x/89/28/11/892811fcde16b7ff41543df2b9686598.jpg" alt="">
+    </div>
+</body>
+
+</html>
